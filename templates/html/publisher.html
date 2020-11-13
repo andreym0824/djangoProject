@@ -1,0 +1,16 @@
+{% extends "./base.html" %}
+{% block title %}publisher list{% endblock %}
+{% block headline %}Publisher List{% endblock %}
+{% block content %}
+    <h1>Publisher</h1>
+    {% for publisher in publisher_list %}
+        <p>
+            <span>{{ publisher.name }}</span>
+            <span>{{ publisher.address }}</span>
+            <span>{{ publisher.city }}</span>
+            <span>{{ publisher.state_province }}</span>
+            <span>{{ publisher.country }}</span>
+            <span>{{ publisher.website }}</span>
+        </p>
+    {% endfor %}
+{% endblock %}
